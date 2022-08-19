@@ -21,6 +21,11 @@ body a:visited {
 color: #9aea8f;
 }
 
+::selection {
+color: white;
+background: #83ff83;
+}
+
 #contribute button {
 width: 14em;
 border-radius: 5px;
