@@ -1,4 +1,96 @@
-<h1 id="new_projects">2 New Projects Incoming!!</h1>
-<h2>bloggz.uray.gen.tr & wordtr.uray.gen.tr</h2>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-Keep in mind that we can cancel them at any time!
+<meta name="author" content="alp">
+<meta name="publisher" content="alp">
+<meta name="copyright" content="uray.gen.tr">
+<meta name="description" content="FAQ of Uray.Gen.TR" />
+<meta name="keywords" content="website, faq, uray">
+
+<meta property="og:title" content="Soon 😉"> 
+<meta property="og:description" content="Projects coming soon!">
+<meta property="og:image" content="https://uray.gen.tr/img/ur.png">
+<meta property="og:url" content="https://uray.gen.tr">
+<meta name="twitter:card" content="https://uray.gen.tr/img/ur.png">
+
+<link rel="icon" href="https://uray.gen.tr/img/ur.png">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="/js/script.js"></script>
+
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<title>2 Projects Coming Soon!</title>
+</head>
+  
+<center>
+
+<h1 id="new_projects">2 New Projects Coming Soon!</h1>
+<h2><img src="https://uray.gen.tr/img/bloggz.png" height="100"> & <img src="https://uray.gen.tr/img/wordtr.png" height="100"></h2>
+
+<label id="StC">Keep in mind that we can cancel them at any time!</label>
+
+<br><br><a id="changeLang" onclick="changeLanguage();">Change language (to Türkçe)</a>
+
+</center>  
+  
+<script>
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function changeLanguage() {
+    let lang = navigator.language || navigator.userLanguage;
+
+    if (getCookie('language')) {
+    lang = getCookie('language')
+    }
+
+    if (lang === 'tr_TR') {
+    setCookie('language', 'en_US', 3650)
+    } else {
+    setCookie('language', 'tr_TR', 3650)
+    }
+
+    return window.location.reload();
+}
+
+let lang = navigator.language || navigator.userLanguage;
+
+if (getCookie('language')) {
+lang = getCookie('language');
+}
+
+if (lang === "tr_TR") {
+    document.title = "2 Yeni Proje Çok Yakında!"
+    document.getElementById("new_projects").innerHTML = "2 Yeni Proje Çok Yakında!"
+    document.getElementById("changeLang").innerHTML = "Dili değiştirin (English)";
+    document.getElementById("StC").innerHTML = "Bunları her an iptal edebileceğimizi unutmayın!"
+} else {
+    document.title = "2 New Projects Coming Soon!"
+    document.getElementById("new_projects").innerHTML = "2 New Projects Coming Soon!"
+    document.getElementById("changeLang").innerHTML = "Change language (to Türkçe)";
+    document.getElementById("StC").innerHTML = "Keep in mind that we can cancel them at any time!"
+}
+</script>
