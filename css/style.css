@@ -21,6 +21,15 @@ body a:visited {
 color: #9aea8f;
 }
 
+#contribute button {
+width: 14em;
+border-radius: 5px;
+height: 3em;
+border: 5px ridge #dedede;
+background-color: #000;
+color: #fff;
+}
+
 .colorful {
 animation: colorful_txt 4s infinite;
 }
